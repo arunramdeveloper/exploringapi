@@ -6,17 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing javascript</title>
 
+    <script src="./API/RandomJokes.js">
+
+
+    </script>
+
 </head>
 
 <body>
 
     <h4>welcome to javascript </h4>
 
+    <h4>welcome to javascript </h4>
+
+    <button onclick="getRnadomJokes()"> Click random jokes </button>
 
 
-    <script src="./pages/Test1.js">
 
+    <script>
+
+        setInterval(() => {
+            console.log("calling every 2 second ");
+            getRnadomJokes();
+        }, 2000);
+
+        let count = 0;
+
+        (() => {
+            count++;
+            console.log('Count inside IIFE:', count);
+            getRnadomJokes();
+        })();
     </script>
+
+
+
 </body>
 
 </html>
